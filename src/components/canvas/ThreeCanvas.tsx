@@ -5,7 +5,11 @@ import * as THREE from "three";
 import { FBXLoader } from "three/addons/loaders/FBXLoader.js";
 import { OrbitControls } from "three/examples/jsm/Addons.js";
 
-const ThreeCanvas = () => {
+interface ThreeCanvasProps {
+  setIsLoaded: (isLoaded: boolean) => void;
+}
+
+const ThreeCanvas = ({ setIsLoaded }: ThreeCanvasProps) => {
   const mountRef = useRef<HTMLDivElement | null>(null);
   const modelRef = useRef<THREE.Group | null>(null);
 
@@ -41,6 +45,9 @@ const ThreeCanvas = () => {
         scene.add(object);
         modelRef.current = object;
         animate();
+        requestAnimationFrame(() => {
+          setIsLoaded(true);
+        });
       },
       undefined,
       (error) => {
@@ -87,7 +94,7 @@ const ThreeCanvas = () => {
         mountRef.current.removeChild(renderer.domElement);
       }
     };
-  }, []);
+  }, [setIsLoaded]);
 
   return <div ref={mountRef} />;
 };
