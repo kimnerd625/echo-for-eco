@@ -26,11 +26,11 @@ const NavBar = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-10 transition-opacity duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-40 transition-opacity duration-300 ${
         hasScrolled ? "bg-white bg-opacity-50" : "bg-transparent"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className=" mx-auto px-4 sm:px-6 lg:px-48">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center gap-3">
             <Image
@@ -43,7 +43,12 @@ const NavBar = () => {
               E.F.E
             </h2>
           </div>
-          <nav>{/* 네비게이션 링크 */}</nav>
+          {/* Get Started 버튼 추가 */}
+          <div>
+            <button className="bg-[#00AE28] text-white py-2 px-4 rounded-lg transition duration-300 ease-in-out hover:bg-[#00821d]">
+              Get Started
+            </button>
+          </div>
         </div>
       </div>
     </header>
