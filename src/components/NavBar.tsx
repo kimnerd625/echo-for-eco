@@ -39,13 +39,13 @@ const NavBar = () => {
               width={logoWidth}
               height={logoHeight}
             />
-            <h2 className={`${PeaceSans.className} text-3xl text-[#00AE28]`}>
+            <h2 className={`${PeaceSans.className} text-3xl text-[#72F14E]`}>
               E.F.E
             </h2>
           </div>
           {/* Get Started 버튼 추가 */}
           <div>
-            <button className="bg-[#00AE28] text-white py-2 px-4 rounded-lg transition duration-300 ease-in-out hover:bg-[#00821d]">
+            <button className="bg-[#72F14E] text-black py-2 px-4 rounded-lg transition duration-300 ease-in-out hover:bg-[#00AE28]">
               Get Started
             </button>
           </div>
