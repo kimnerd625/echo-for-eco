@@ -10,7 +10,7 @@ const GlobeSection = () => {
   const [isLoaded, setIsLoaded] = useState<boolean>(false);
 
   // 각 h2 태그에 대한 참조 생성
-  const h2Refs = useRef([]);
+  const h2Refs = useRef<HTMLHeadingElement[]>([] as HTMLHeadingElement[]);
   h2Refs.current = [];
 
   const addToRefs = (el: HTMLHeadingElement | null) => {
