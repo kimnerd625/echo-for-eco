@@ -17,6 +17,15 @@ const ThreeCanvas = ({ setIsLoaded }: ThreeCanvasProps) => {
     if (!mountRef.current) return;
 
     const scene = new THREE.Scene();
+
+    // const bgLoader = new THREE.TextureLoader();
+    // bgLoader.load(
+    //   "/images/bgBlack.jpg", // 배경 이미지 경로
+    //   (texture) => {
+    //     scene.background = texture;
+    //   }
+    // );
+
     const camera = new THREE.PerspectiveCamera(
       75,
       window.innerWidth / window.innerHeight,
@@ -25,7 +34,8 @@ const ThreeCanvas = ({ setIsLoaded }: ThreeCanvasProps) => {
     );
     camera.position.z = 12;
 
-    const renderer = new THREE.WebGLRenderer();
+    const renderer = new THREE.WebGLRenderer({ alpha: true });
+    renderer.setClearColor(0x000000, 0);
     renderer.setSize(window.innerWidth, window.innerHeight);
     mountRef.current.appendChild(renderer.domElement);
 
