@@ -4,8 +4,10 @@ import React, { useState, useRef, useEffect } from "react";
 import Image from "next/image";
 import { gsap } from "gsap";
 
+import { PorterInlineBlock } from "@/app/localFont";
 import ThreeCanvas from "../canvas/ThreeCanvas";
 import Loading from "@/app/loading";
+
 import firstTitleImage from "../../../public/images/firstTitleImage.png";
 import secondTitleImage from "../../../public/images/secondTitleImage.png";
 import thirdTitleImage from "../../../public/images/thirdTitleImage.png";
@@ -86,6 +88,22 @@ const GlobeSection = () => {
                 for a <span className="text-[#72F14E]">Greener</span>
               </h2>
               <h2 ref={addToRefs}>Tomorrow</h2>
+            </div>
+            <div
+              className="absolute hidden md:block md:bottom-12 md:left-2 lg:bottom-16 lg:left-2 text-white z-10"
+              style={{
+                writingMode: "vertical-lr",
+                transform: "rotate(0deg)",
+              }}
+            >
+              <p className={`${PorterInlineBlock.className} lg:text-2xl`}>
+                ECHO FOR ECO
+              </p>
+            </div>
+            <div className="absolute hidden md:block md:bottom-2 md:left-8 lg:bottom-4 lg:left-12 text-white z-10">
+              <p className={`${PorterInlineBlock.className} lg:text-2xl`}>
+                ECHO FOR ECO
+              </p>
             </div>
           </>
         )}

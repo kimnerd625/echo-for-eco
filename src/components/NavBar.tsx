@@ -1,8 +1,9 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
-import { PeaceSans } from "@/app/localFont";
+import { signIn } from "next-auth/react";
 
+import { PeaceSans, PressStart } from "@/app/localFont";
 import logoMain from "../../public/images/logoMain.png";
 
 const NavBar = () => {
@@ -45,7 +46,10 @@ const NavBar = () => {
           </div>
           {/* Get Started 버튼 추가 */}
           <div>
-            <button className="bg-[#72F14E] text-black py-2 px-4 rounded-lg transition duration-300 ease-in-out hover:bg-[#00AE28]">
+            <button
+              className={`${PeaceSans.className} bg-[#72F14E] text-center text-black py-2 px-4 rounded-xl transition duration-300 ease-in-out hover:bg-[#4ef161]`}
+              onClick={() => signIn()}
+            >
               Get Started
             </button>
           </div>

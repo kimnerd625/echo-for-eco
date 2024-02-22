@@ -11,3 +11,11 @@ export const Nephilm = localFont({
 export const Recia = localFont({
   src: "../../public/fonts/Recia.ttf",
 });
+
+export const PressStart = localFont({
+  src: "../../public/fonts/PressStart2P.ttf",
+});
+
+export const PorterInlineBlock = localFont({
+  src: "../../public/fonts/PorterSansInlineBlock.ttf",
+});
